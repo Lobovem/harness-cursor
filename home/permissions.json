@@ -1,0 +1,8 @@
+{
+  "autoRun": {
+    "block_instructions": [
+      "Any git add, git commit, or git push must not run without explicit user approval.",
+      "Any glab mr create, merge, approve, or note must not run without explicit user approval."
+    ]
+  }
+}

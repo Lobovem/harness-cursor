@@ -1,0 +1,35 @@
+# Global Cursor policy (mirrors verbatica .gemini/policies/agent-rules.toml).
+# Enforced via ~/.cursor/hooks.json → hooks/git-glab-policy.mjs (all agents).
+# Soft policy: USER-RULES-PASTE.md + skill gitlab-pr.
+
+# 1. Ask for any mutating glab (CREATE, MERGE, APPROVE, NOTE)
+[[rule]]
+name = "Ask user for modifying glab"
+toolName = "run_shell_command"
+commandRegex = "glab (mr (create|merge|approve|note)).*"
+decision = "ask_user"
+priority = 950
+
+# 2. Ask for any mutating git (ADD, COMMIT, PUSH)
+[[rule]]
+name = "Ask user for modifying git"
+toolName = "run_shell_command"
+commandRegex = "git (add|commit|push).*"
+decision = "ask_user"
+priority = 900
+
+# 3. Read-only glab — allow (documented; hook allows by default after ask rules)
+[[rule]]
+name = "Allow read-only glab"
+toolName = "run_shell_command"
+commandRegex = "glab (mr (view|list|status)|auth status|repo view|version).*"
+decision = "allow"
+priority = 850
+
+# 4. Read-only git — allow
+[[rule]]
+name = "Allow read-only git"
+toolName = "run_shell_command"
+commandRegex = "git (status|branch|diff|log|rev-parse|remote|show|ls-files|version).*"
+decision = "allow"
+priority = 800
