@@ -7,20 +7,20 @@ Foundation slots are **linked** into `~/.cursor` from this repo.
 
 ## Layout
 
-| Repo path | Linked as |
-|-----------|-----------|
-| `agents/` | `~/.cursor/agents` |
-| `skills/` | `~/.cursor/skills` |
-| `commands/` | `~/.cursor/commands` |
-| `hooks/` | `~/.cursor/hooks` |
-| `policies/` | `~/.cursor/policies` |
-| `rules/` | `~/.cursor/rules` |
-| `home/` | `~/.cursor/home` (+ root files below) |
-| `home/hooks.json` | `~/.cursor/hooks.json` |
-| `home/permissions.json` | `~/.cursor/permissions.json` |
-| `home/mcp.json` | `~/.cursor/mcp.json` |
-| `home/AGENTS.md` | `~/.cursor/AGENTS.md` |
-| `home/USER-RULES-PASTE.md` | `~/.cursor/USER-RULES-PASTE.md` |
+| Repo path                  | Linked as                             |
+| -------------------------- | ------------------------------------- |
+| `agents/`                  | `~/.cursor/agents`                    |
+| `skills/`                  | `~/.cursor/skills`                    |
+| `commands/`                | `~/.cursor/commands`                  |
+| `hooks/`                   | `~/.cursor/hooks`                     |
+| `policies/`                | `~/.cursor/policies`                  |
+| `rules/`                   | `~/.cursor/rules`                     |
+| `home/`                    | `~/.cursor/home` (+ root files below) |
+| `home/hooks.json`          | `~/.cursor/hooks.json`                |
+| `home/permissions.json`    | `~/.cursor/permissions.json`          |
+| `home/mcp.json`            | `~/.cursor/mcp.json`                  |
+| `home/AGENTS.md`           | `~/.cursor/AGENTS.md`                 |
+| `home/USER-RULES-PASTE.md` | `~/.cursor/USER-RULES-PASTE.md`       |
 
 `AGENTS.md` / `USER-RULES-PASTE.md` also hardlinked at repo root for convenience.
 
